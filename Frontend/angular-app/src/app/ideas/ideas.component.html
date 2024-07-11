@@ -1,0 +1,27 @@
+<div>
+    <button (click)="changeCriteria('controversial')">Controversial</button>
+    <button (click)="changeCriteria('unpopular')">Unpopular</button>
+    <button (click)="changeCriteria('mainstream')">Mainstream</button>
+</div>
+
+<div class="container">
+    <h1>Idee pubblicate</h1>
+    @for(idea of ideas; track idea){
+        <h2>{{idea.title}}</h2>
+        <markdown [data]="idea.description"></markdown>
+        <button (click)="handleVote(idea.id, 'like')" class="like">Concordo</button>
+        <button (click)="handleVote(idea.id, 'dislike')" class="dislike">Non concordo</button>
+        <button (click)="showComment(idea.id)">Commenta</button>
+        <button (click)="handleDelete(idea.id)">Elimina</button>
+    }
+</div>
+
+
+<footer>
+    <button routerLink="/editidea">Pubblica Idea</button>
+    <button (click)="loadMore()">Carica altre idee</button> 
+    <button (click)="comeBack()">Mostra precedenti</button>
+    <button (click)="logout()">Esci</button>
+</footer>
+
+

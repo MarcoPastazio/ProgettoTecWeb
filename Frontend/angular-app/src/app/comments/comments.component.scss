@@ -1,0 +1,121 @@
+$max-width: 600px;
+$margin-bottom: 15px;
+$padding: 8px;
+$label-margin-bottom: 5px;
+$border-radius: 4px;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$transition: 0.3s ease-in-out;
+$border-color: #ccc;
+$focus-border-color: #007bff;
+$button-font-family: 'Arial', sans-serif;
+$button-font-size: 1rem;
+$button-color: white;
+$button-bg-color: blue;
+$button-hover-bg-color: lightblue;
+$button-hover-color: black;
+$button-padding: 0.5rem;
+$button-disabled-bg-color: red;
+$button-disabled-opacity: 0.6;
+
+$media-small: 480px;
+$media-medium: 768px;
+$media-large: 1024px;
+
+.comment-form {
+  max-width: $max-width;
+  margin: 0 auto;
+  
+  div {
+    margin-bottom: $margin-bottom;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $label-margin-bottom;
+  }
+
+  textarea {
+    width: 100%;
+    padding: $padding;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    transition: border-color $transition, box-shadow $transition;
+
+    &:focus {
+      border-color: $focus-border-color;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+      outline: none;
+    }
+  }
+
+  button {
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    color: $button-color;
+    background-color: $button-bg-color;
+    padding: $button-padding;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    transition: background-color $transition, color $transition;
+
+    &:hover {
+      background-color: $button-hover-bg-color;
+      color: $button-hover-color;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &:disabled {
+      background-color: $button-disabled-bg-color;
+      cursor: not-allowed;
+      opacity: $button-disabled-opacity;
+    }
+  }
+
+  p {
+    margin: 0 0 $margin-bottom;
+    padding: $padding;
+    border-radius: $border-radius;
+    background-color: #f9f9f9;
+    box-shadow: $box-shadow;
+  }
+}
+
+@media (max-width: $media-large) {
+  .comment-form {
+    max-width: 90%;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: $media-medium) {
+  .comment-form {
+    max-width: 100%;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: $media-small) {
+  .comment-form {
+    padding: 0 $padding;
+  }
+
+  button {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+}

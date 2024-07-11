@@ -1,0 +1,14 @@
+<div class="idea-form">
+    <form [formGroup]="ideaForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="title">Titolo</label>
+        <input id="title" formControlName="title" required>
+      </div>
+      <div>
+        <label for="description">Descrizione</label>
+        <textarea id="description" formControlName="description" rows="5" required></textarea>
+      </div>
+      <button type="submit" [disabled]="ideaForm.invalid">Condividi</button>
+      <button routerLink="/ideas">Torna indietro</button>
+    </form>
+</div>

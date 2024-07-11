@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<body class="body">
+  <div class="container">
+    <h1>Accedi a {{ title }}</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+      <label for="username">Username:</label>
+      <input id="username" name="username" formControlName="username"/>
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" formControlName="password"/>
+      <button type="submit">Accedi</button>
+      <button routerLink="/">Torna indietro</button>
+    </form>
+  </div>
+</body>
+<router-outlet></router-outlet>

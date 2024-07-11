@@ -1,0 +1,18 @@
+<div class="comment-form">
+  <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="comment">Scrivi un commento</label>
+      <textarea id="comment" formControlName="content" rows="5" required></textarea>
+    </div>
+    <button type="submit" [disabled]="commentForm.invalid">Pubblica Commento</button>
+  </form>
+
+  <h2>Commenti già pubblicati</h2>
+  @for(comment of comments; track comment){
+    <p>{{comment.content}}</p>
+  }
+  <button routerLink="/ideas">Torna Indietro</button>
+</div>
+
+
+

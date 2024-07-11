@@ -1,0 +1,15 @@
+<body class="body">
+  <div class="container">
+    <h1>Registrati in {{ title }}</h1>
+    <form [formGroup]="signupForm" (ngSubmit)="handleSignup()">
+      <label for="username">Username:</label>
+      <input id="username" name="username" formControlName="username"/>
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" formControlName="password"/>
+      <button type="submit">Registrati</button>
+      <button routerLink="/">Torna indietro</button>
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+</body>
+

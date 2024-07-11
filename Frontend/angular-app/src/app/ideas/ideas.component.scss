@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+  
+h1{
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: darkslategrey;
+    margin-bottom: 1rem;
+}
+  
+form{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 350px;
+    margin-bottom: 2rem;
+}
+  
+label{
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: darkslategrey;
+    margin-bottom: 0.5rem;
+}
+  
+input{
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+button{
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: blue;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  
+    &:hover{
+        background-color: lightblue;
+        color: black;
+    }
+  
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+button.like {
+    &:hover {
+      background-color: greenyellow;
+      color: black;
+    }
+  }
+  
+  button.dislike {
+    &:hover {
+      background-color: red;
+      color: black;
+    }
+  }
+  
+.ideas-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.idea-item{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 600px;
+  
+    h2{
+        font-family: 'Arial', sans-serif;
+        font-size: 1.5rem;
+        color: darkslategrey;
+    }
+  
+    p{
+        font-family: 'Arial', sans-serif;
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+  
+    button{
+        width: auto;
+        margin: 0 0.5rem 0 0;
+    }
+}
+  
+@media(min-width: 577px) and (max-width: 992px){
+    .container{
+        padding: 2rem;
+    }
+  
+    form{
+        width: 80%;
+        max-width: 500px;
+    }
+  
+    .idea-item{
+        width: 80%;
+    }
+}
+  
+@media(min-width: 993px){
+    .container{
+        padding: 3rem;
+    }
+  
+    form{
+        width: 50%;
+        max-width: 600px;
+    }
+  
+    .idea-item{
+        width: 50%;
+    }
+}
+  
