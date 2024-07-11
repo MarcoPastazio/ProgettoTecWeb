@@ -1,5 +1,3 @@
-# ProgettoTecWeb
-
 # Come avviare il progetto
 
 1) dalla directory Backend e dalla directory angular-app fare npm install
